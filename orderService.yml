@@ -1,0 +1,23 @@
+server:
+  port: 8083  # O cualquier otro puerto
+
+spring:
+  application:
+    name: orderService
+  datasource:
+    url: jdbc:postgresql://localhost:5432/orders_db  # Ajusta el nombre de la base de datos si es diferente
+    username: postgres  # Asegúrate de que sea el usuario correcto
+    password: 123456789  # Asegúrate de que sea la contraseña correcta
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update  # O `none` si no quieres que modifique la BD
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
