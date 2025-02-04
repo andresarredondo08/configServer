@@ -5,13 +5,13 @@ spring:
   application:
     name: orderService
   datasource:
-    url: jdbc:postgresql://localhost:5432/orders_db  # Ajusta el nombre de la base de datos si es diferente
-    username: postgres  # Asegúrate de que sea el usuario correcto
-    password: 123456789  # Asegúrate de que sea la contraseña correcta
+    url: jdbc:postgresql://localhost:5432/orders_db 
+    username: postgres 
+    password: 123456789 
     driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
-      ddl-auto: update  # O `none` si no quieres que modifique la BD
+      ddl-auto: 
     show-sql: true
     properties:
       hibernate:
